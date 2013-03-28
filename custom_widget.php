@@ -73,8 +73,12 @@ function werkpressDashboardWidgetContent() {
 		
 		<label for="budget">What is your project budget?</label>
 		<select name="name">
-			<option>$0-500</option>
-			<option>$1000-5000</option>
+			<option>&#60; $500</option>
+			<option>$500 - 1000</option>
+			<option>$1000 - 2000</option>
+			<option>$2000 - 5000</option>
+			<option>$5000 - 10000</option>
+			<option>&#62; 10000</option>
 		</select>
 		
 		<input type="submit">
