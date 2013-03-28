@@ -43,7 +43,16 @@ $custom_dashboard_widgets = array(
 );
 
 function werkpressDashboardWidgetContent() {
-    $user = wp_get_current_user();
-    echo "Hello <strong>" . $user->user_login . "</strong>, this is your custom widget. You can, for instance, list all the posts you've published:";
+    ?>
 	
+	<form>
+		
+		<input type="text">
+		
+		<input type="submit">
+		
+		
+	</form>
+
+	<?php
 }
