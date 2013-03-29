@@ -37,7 +37,7 @@ $remove_defaults_widgets = array(
 
 $custom_dashboard_widgets = array(
     'werkpress-dashboard-widget' => array(
-        'title' => 'Werkpress Dashboard Widget',
+        'title' => 'Werkpress Customization Request',
         'callback' => 'werkpressDashboardWidgetContent'
     )
 );
@@ -86,12 +86,13 @@ function werkpressDashboardWidgetContent() {
 			<li>
 				<label for="budget">What is your project budget?</label><br/>
 				<select name="name">
-					<option>&#60; $500</option>
-					<option>$500 - 1000</option>
-					<option>$1000 - 2000</option>
-					<option>$2000 - 5000</option>
-					<option>$5000 - 10000</option>
-					<option>&#62; 10000</option>
+					<option value="">Select a budget</option>
+					<option value="Less than 500">&#60; $500</option>
+					<option value="Between 500 and 1000">$500 - 1000</option>
+					<option value="Between 1000 and 2000">$1000 - 2000</option>
+					<option value="Between 2000 and 5000">$2000 - 5000</option>
+					<option value="Between 5000 and 10000">$5000 - 10000</option>
+					<option value="Greater than 10000">&#62; 10000</option>
 				</select>
 			</li>
 			<li id="ww_submit">	
