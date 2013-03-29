@@ -9,6 +9,16 @@ Author URI:
 License: GPL2
 */
 
+/**
+ * Register with hook 'wp_enqueue_scripts', which can be used for front end CSS and JavaScript
+ */
+function my_admin_theme_style() {
+    wp_enqueue_style('my-admin-theme', plugins_url('assets/ww_style.css', __FILE__));
+}
+add_action('admin_enqueue_scripts', 'my_admin_theme_style');
+add_action('login_enqueue_scripts', 'my_admin_theme_style');
+
+
 require_once( plugin_dir_path( __FILE__ ) . 'custom_widget.php' );
 
 class WerkpressDashboardWidget {

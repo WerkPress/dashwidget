@@ -44,41 +44,56 @@ $custom_dashboard_widgets = array(
 
 function werkpressDashboardWidgetContent() {
     ?>
-	
-	<form>
-		
-		<label for="name">Your name</label>
-		<input type="text" name="name">
-		
-		<label for="company">Company name</label>
-		<input type="text" name="company">
-		
-		<label for="email">Email</label>
-		<input type="text" name="email">
-		
-		<label for="website">Your site</label>
-		<input type="text" name="website">
-		
-		<label for="theme">What theme do you want modified?</label>
-		<input type="text" name="theme">
-		
-		<label for="hosting">Your hosting provider</label>
-		<input type="text" name="hosting">
-		
-		<label for="name">Your Name</label>
-		<input type="text" name="name">
-		
-		<label for="changes">Describe desired changes</label>
-		<textarea name="changes"></textarea>
-		
-		<label for="budget">What is your project budget?</label>
-		<select name="name">
-			<option>$0-500</option>
-			<option>$1000-5000</option>
-		</select>
-		
-		<input type="submit">
-		
+	<h1>
+		<?php
+			echo '<img src="' . plugins_url( 'assets/logo.png' , __FILE__ ) . '" alt="Werkpress"> ';
+		?>
+	</h1>
+	<form id="ww_form">
+		<ul>
+			<li>
+				<label for="name">Your name</label><br/>
+				<input type="text" name="name">
+			</li>
+			<li>	
+				<label for="company">Company name</label><br/>
+				<input type="text" name="company">
+			</li>	
+			<li>
+				<label for="email">Email</label><br/>
+				<input type="text" name="email">
+			</li>	
+			<li>	
+				<label for="website">Your site</label><br/>
+				<input type="text" name="website">
+			</li>
+			<li>	
+				<label for="theme">What theme do you want modified?</label><br/>
+				<input type="text" name="theme">
+			</li>
+			<li>	
+				<label for="hosting">Your hosting provider</label><br/>
+				<input type="text" name="hosting">
+			</li>
+			<li>	
+				<label for="name">Your Name</label><br/>
+				<input type="text" name="name">
+			</li>
+			<li id="ww_textarea">	
+				<label for="changes">Describe desired changes</label><br/>
+				<textarea name="changes"></textarea>
+			</li>	
+			<li>
+				<label for="budget">What is your project budget?</label><br/>
+				<select name="name">
+					<option>$0-500</option>
+					<option>$1000-5000</option>
+				</select>
+			</li>
+			<li id="ww_submit">	
+				<input type="submit" value="Request Customization">
+			</li>
+		<ul>
 		
 		
 	</form>
