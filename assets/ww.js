@@ -14,16 +14,18 @@ $j(document).ready(function(){
 		data.budget = $j('#ww_budget').val();
 		console.log(data);
 		
-		url = "<?php echo plugins_url('email.php', __FILE__)?>";
-		console.log(url);
-		
 		$j.ajax({
 			type: 'POST',
-			url: url,
+			url: ajaxcontactajax.ajaxurl,
 			data: data,
+			action: 'wwSendMail',
 			success: function(data) {
-				consolelog(data);
+				console.log(data);
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown){
+				alert(errorThrown);
 			}
+			
 		});
 	});
 });

@@ -15,6 +15,8 @@ License: GPL2
 function my_admin_theme_style() {
     wp_enqueue_style('my-admin-theme', plugins_url('assets/ww_style.css', __FILE__));
 	wp_enqueue_script('my-admin-js', plugins_url('assets/ww.js', __FILE__));
+	wp_localize_script( 'my-admin-js', 'ajaxcontactajax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+	
 }
 
 add_action('admin_enqueue_scripts', 'my_admin_theme_style');
@@ -51,5 +53,44 @@ class WerkpressDashboardWidget {
 	}
  
 }
+
+function wwSendMail(){
+
+	$name = $_POST['name'];
+	$company = $_POST['company'];
+	$email = $_POST['email'];
+	$website = $_POST['website'];
+	$theme = $_POST['theme'];
+	$hosting = $_POST['hosting'];
+	$changes = $_POST['changes'];
+	$budget = $_POST['budget'];
+
+
+	// Build email
+
+	$to = 'eric@westwerkdesign.com';
+	$subject = "Theme Customization Request from $name";
+	$message = "Request from: $name \n";
+	$message .= "Company: $company \n";
+	$message .= "Email: $email \n";
+	$message .= "Website: $website \n";
+	$message .= "Theme: $theme \n";
+	$message .= "Hosting: $hosting \n";
+	$message .= "Changes: $changes \n";
+	$message .= "Budget: $budget \n";
+
+	if ( wp_mail( $to, $subject, $message ) ){
+		echo "Message sent";
+	}
+
+	else {
+		echo "Couldn't send message";
+	}
+
+}
+
+// creating Ajax call for WordPress
+add_action( 'wp_ajax_nopriv_ajaxcontact_send_mail', 'wwSendMail' );
+add_action( 'wp_ajax_ajaxcontact_send_mail', 'wwSendMail' );
  
 $wdw = new WerkpressDashboardWidget();
