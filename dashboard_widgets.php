@@ -14,7 +14,9 @@ License: GPL2
  */
 function my_admin_theme_style() {
     wp_enqueue_style('my-admin-theme', plugins_url('assets/ww_style.css', __FILE__));
+	wp_enqueue_script('my-admin-js', plugins_url('assets/ww.js', __FILE__));
 }
+
 add_action('admin_enqueue_scripts', 'my_admin_theme_style');
 add_action('login_enqueue_scripts', 'my_admin_theme_style');
 
