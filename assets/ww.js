@@ -35,7 +35,7 @@ $j(document).ready(function(){
             });
             
             //Submit post if all required fields are populated
-            if ( $j.inArray('false', formValues) == '-1' ) {
+            if ( $j.inArray('false', formValues) == '-1' && (data.email).indexOf('@') !== -1 ) {
 		        
         		$j.ajax({
         			type: 'POST',

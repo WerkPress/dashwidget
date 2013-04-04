@@ -61,7 +61,7 @@ function werkpressDashboardWidgetContent() {
 			</li>	
 			<li>
 				<label for="email">Email</label><span class="req"></span><br/>
-				<input class="required" type="text" name="email" id="ww_email">
+				<input class="required" type="email" name="email" id="ww_email">
 			</li>	
 			<li class="right">		
 				<label for="website">Your site</label><span class="req"></span><br/>
