@@ -21,6 +21,9 @@ function my_admin_theme_style() {
 
 add_action('admin_enqueue_scripts', 'my_admin_theme_style');
 add_action('login_enqueue_scripts', 'my_admin_theme_style');
+// creating Ajax call for WordPress
+add_action( 'wp_ajax_nopriv_ajaxcontact_send_mail', 'wwSendMail' );
+add_action( 'wp_ajax_ajaxcontact_send_mail', 'wwSendMail' );
 
 
 require_once( plugin_dir_path( __FILE__ ) . 'custom_widget.php' );
@@ -56,15 +59,14 @@ class WerkpressDashboardWidget {
 
 function wwSendMail(){
 
-	$name = $_POST['name'];
-	$company = $_POST['company'];
-	$email = $_POST['email'];
-	$website = $_POST['website'];
-	$theme = $_POST['theme'];
-	$hosting = $_POST['hosting'];
-	$changes = $_POST['changes'];
-	$budget = $_POST['budget'];
-
+	$name = esc_html($_POST['name']);
+	$company = esc_html($_POST['company']);
+	$email = esc_html($_POST['email']);
+	$website = esc_html($_POST['website']);
+	$theme = esc_html($_POST['theme']);
+	$hosting = esc_html($_POST['hosting']);
+	$changes = esc_html($_POST['changes']);
+	$budget = esc_html($_POST['budget']);
 
 	// Build email
 
@@ -79,18 +81,10 @@ function wwSendMail(){
 	$message .= "Changes: $changes \n";
 	$message .= "Budget: $budget \n";
 
-	if ( wp_mail( $to, $subject, $message ) ){
-		echo "Message sent";
-	}
-
-	else {
-		echo "Couldn't send message";
-	}
+	wp_mail( $to, $subject, $message );
+    
+    die("It worked");
 
 }
-
-// creating Ajax call for WordPress
-add_action( 'wp_ajax_nopriv_ajaxcontact_send_mail', 'wwSendMail' );
-add_action( 'wp_ajax_ajaxcontact_send_mail', 'wwSendMail' );
  
 $wdw = new WerkpressDashboardWidget();

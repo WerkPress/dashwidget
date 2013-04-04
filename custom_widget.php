@@ -52,37 +52,37 @@ function werkpressDashboardWidgetContent() {
 	<form id="ww_form">
 		<ul>
 			<li>
-				<label for="name">Your name</label><br/>
-				<input type="text" name="name" id="ww_name">
+				<label for="name">Your name</label><span class="req"></span><br/>
+				<input class="required" type="text" name="name" id="ww_name">
 			</li>
 			<li class="right">	
-				<label for="company">Company name</label><br/>
+				<label for="company">Company name</label><span class="req"></span><br/>
 				<input type="text" name="company"  id="ww_company">
 			</li>	
 			<li>
-				<label for="email">Email</label><br/>
-				<input type="text" name="email" id="ww_email">
+				<label for="email">Email</label><span class="req"></span><br/>
+				<input class="required" type="text" name="email" id="ww_email">
 			</li>	
 			<li class="right">		
-				<label for="website">Your site</label><br/>
-				<input type="text" name="website" id="ww_website">
+				<label for="website">Your site</label><span class="req"></span><br/>
+				<input class="required" type="text" name="website" id="ww_website">
 			</li>
 			<li>	
-				<label for="theme">What theme do you want modified?</label><br/>
-				<input type="text" name="theme" id="ww_theme">
+				<label for="theme">What theme do you want modified?</label><span class="req"></span><br/>
+				<input class="required" type="text" name="theme" id="ww_theme">
 			</li>
 			<li class="right">		
-				<label for="hosting">Your hosting provider</label><br/>
+				<label for="hosting">Your hosting provider</label><span class="req"></span><br/>
 				<input type="text" name="hosting" id="ww_hosting">
 			</li>
 
 			<li id="ww_textarea">	
-				<label for="changes">Describe desired changes</label><br/>
-				<textarea name="changes" id="ww_changes"></textarea>
+				<label for="changes">Describe desired changes</label><span class="req"></span><br/>
+				<textarea class="required" name="changes" id="ww_changes"></textarea>
 			</li>	
 			<li>
-				<label for="budget">What is your project budget?</label><br/>
-				<select name="budget" id="ww_budget">
+				<label for="budget">What is your project budget?</label><span class="req"></span><br/>
+				<select class="required" name="budget" id="ww_budget">
 					<option value="">Select a budget</option>
 					<option value="Less than 500">&#60; $500</option>
 					<option value="Between 500 and 1000">$500 - 1000</option>
@@ -92,6 +92,8 @@ function werkpressDashboardWidgetContent() {
 					<option value="Greater than 10000">&#62; $10000</option>
 				</select>
 			</li>
+            
+            <li class="right"><h2><span class="req">* </span> Required field</h2></li>
 			<li id="ww_submit">	
 				<input type="submit" value="Request Customization" id="ww_submit_button">
 			</li>
@@ -99,6 +101,7 @@ function werkpressDashboardWidgetContent() {
 		
 		
 	</form>
+    
 
 	<?php
 }
