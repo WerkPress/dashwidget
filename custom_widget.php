@@ -37,7 +37,7 @@ $remove_defaults_widgets = array(
 
 $custom_dashboard_widgets = array(
     'werkpress-dashboard-widget' => array(
-        'title' => 'Werkpress Customization Request',
+        'title' => 'WerkPress Customization Request',
         'callback' => 'werkpressDashboardWidgetContent'
     )
 );

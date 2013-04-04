@@ -73,13 +73,21 @@ function wwSendMail(){
 	$to = 'eric@westwerkdesign.com';
 	$subject = "Theme Customization Request from $name";
 	$message = "Request from: $name \n";
+    $message .= "---\n";
 	$message .= "Company: $company \n";
+    $message .= "---\n";
 	$message .= "Email: $email \n";
+    $message .= "---\n";
 	$message .= "Website: $website \n";
+    $message .= "---\n";
 	$message .= "Theme: $theme \n";
+    $message .= "---\n";
 	$message .= "Hosting: $hosting \n";
+    $message .= "---\n";
 	$message .= "Changes: $changes \n";
+    $message .= "---\n";
 	$message .= "Budget: $budget \n";
+    $message .= "---\n";
 
 	wp_mail( $to, $subject, $message );
     
