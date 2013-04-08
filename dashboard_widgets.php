@@ -70,7 +70,7 @@ function wwSendMail(){
 
 	// Build email
 
-	$to = 'eric@westwerkdesign.com';
+	$to = 'eric@westwerkdesign.com, zach@westwerkdesign.com';
 	$subject = "Theme Customization Request from $name";
 	$message = "Request from: $name \n";
     $message .= "---\n";
