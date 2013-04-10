@@ -124,7 +124,10 @@
 
 #ww_form submit:hover, #ww_form submit:focus, #ww_form input[type="submit"]:hover, #ww_form input[type="submit"]:focus {
 	cursor: pointer;
-	border-bottom: 5px solid #be3d40;
+    -moz-box-shadow:0px 2px 0px #be3d40;
+    -webkit-box-shadow:0px 2px 0px #be3d40;
+	box-shadow: 0px 2px 0px #be3d40;
+    opacity: .9;
 }
 
 #ww_form submit:active, #ww_form input[type="submit"]:active {

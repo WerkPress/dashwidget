@@ -3,7 +3,7 @@
 Plugin Name: Werkpress Customization Request Widget
 Plugin URI:
 Description: Request a Wordpress Theme Customization from Werkpress
-Version: 0.1
+Version: 0.5b
 Author: Werkpress
 Author URI:
 License: GPL2
