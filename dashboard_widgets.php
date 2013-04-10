@@ -54,7 +54,6 @@ class WerkpressDashboardWidget {
 	        );
 	    }
 	}
- 
 }
 
 function wwSendMail(){
@@ -69,7 +68,6 @@ function wwSendMail(){
 	$budget = esc_html($_POST['budget']);
 
 	// Build email
-
 	$to = 'eric@westwerkdesign.com';
 	$subject = "Theme Customization Request from $name";
 	$message = "Request from: $name \n";
