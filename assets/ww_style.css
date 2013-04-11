@@ -1,5 +1,13 @@
 /* Werkpress Dashboard Widget */
 
+a {
+    color: #3d9a95;
+}
+
+h1  {
+    margin: 0;
+}
+
 #werkpress-dashboard-widget.postbox {
 	background: #ffffff;
 }
@@ -14,10 +22,6 @@
 
 .postbox .inside {
 	padding: 15px 30px;
-}
-
-h1  {
-    margin: 0;
 }
 
 #werkpress-dashboard-widget h2 {

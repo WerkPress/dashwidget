@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Werkpress Customization Request Widget
+Plugin Name: WerkPress Theme Customization Request Dashboard Widget
 Plugin URI:
 Description: Request a Wordpress Theme Customization from Werkpress
 Version: 0.5b
