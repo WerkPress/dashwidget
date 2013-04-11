@@ -44,11 +44,13 @@ $custom_dashboard_widgets = array(
 
 function werkpressDashboardWidgetContent() {
     ?>
-	<h1>
+	<h1 class="alignleft">
 		<?php
 			echo '<img src="' . plugins_url( 'assets/logo.png' , __FILE__ ) . '" alt="Werkpress"> ';
 		?>
 	</h1>
+    
+    <h2 class="alignright"><a href="http://werkpress.com" title="Werkpress.com" target="_blank">werkpress.com</a></h2>
 	<form id="ww_form">
 		<ul>
 			<li>

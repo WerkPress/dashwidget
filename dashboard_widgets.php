@@ -36,14 +36,6 @@ class WerkpressDashboardWidget {
         add_action( 'wp_dashboard_setup', array( $this, 'add_dashboard_widgets' ) );
     }
  
-    function remove_dashboard_widgets() {
-		global $remove_defaults_widgets;
-		
-		foreach ( $remove_defaults_widgets as $widget_id => $options ) {
-			remove_meta_box( $widget_id, $options['page'], $options['context'] );
-		}
-    }
- 
 	function add_dashboard_widgets() {
 	    global $custom_dashboard_widgets;
  
@@ -68,7 +60,7 @@ class WerkpressDashboardWidget {
     	$budget = esc_html($_POST['budget']);
 
     	// Build email
-    	$to = 'eric@westwerkdesign.com';
+    	$to = 'request@werkpress.com';
     	$subject = "Theme Customization Request from $name";
     	$message = "Request from: $name \n";
         $message .= "---\n";
@@ -86,8 +78,13 @@ class WerkpressDashboardWidget {
         $message .= "---\n";
     	$message .= "Budget: $budget \n";
         $message .= "---\n";
+        
+        $headers = [];
+        $headers[] = "From: $name <$email>";
+        $headers[] = "Reply-to: $name <$email>";
+        
 
-    	wp_mail( $to, $subject, $message );
+    	wp_mail( $to, $subject, $message, $headers );
     
         die("It worked");
 

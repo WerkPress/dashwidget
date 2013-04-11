@@ -4,8 +4,20 @@
 	background: #ffffff;
 }
 
+.alignleft {
+    float: left;
+}
+
+.alignright {
+    float: right;
+}
+
 .postbox .inside {
 	padding: 15px 30px;
+}
+
+h1  {
+    margin: 0;
 }
 
 #werkpress-dashboard-widget h2 {
@@ -14,6 +26,11 @@
     margin: 0;
     padding: 0;
     text-align: right;
+}
+
+#ww_form {
+    clear: both;
+    margin-top: 50px;
 }
 
 #ww_form ul {
@@ -83,6 +100,7 @@
 #ww_form select {
 	appearance: none;
 	-webkit-appearance:none;
+    width: 100%;
 	height: auto;
 	background: #f6f5f2;
 	padding: 10px 25px 10px 10px;
